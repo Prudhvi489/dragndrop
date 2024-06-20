@@ -4,7 +4,6 @@ export const Lastmodifiedtime = (timestamp) => {
     }
     let milliseconds = timestamp * 1000;
     const date = new Date(milliseconds);
-    console.log(date.getDate(),"Date")
     const hours = date.getHours();
     const minutes = date.getMinutes().toString().padStart(2, "0");
     const ampm = hours >= 12 ? "PM" : "AM";
