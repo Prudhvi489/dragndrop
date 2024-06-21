@@ -83,6 +83,7 @@ const DndPage = ({ initialData }) => {
       content: items,
       modified: serverTimestamp(),
       other_elements: other_elements,
+      items_data:tableval
     };
     let docid;
     if (!location?.state?.pageid) {
@@ -219,6 +220,20 @@ const DndPage = ({ initialData }) => {
                     <Grid item md={9}>
                       {item.type === "TextInput" && (
                         <TextField
+                        sx={{
+                          "& .MuiOutlinedInput-root": {
+                            background: `#F2F2F2!important`,
+                            borderRadius: `0.5rem`,
+                            "& fieldset": {
+                              border: "none",
+                            },
+                          },
+                          "& .MuiOutlinedInput-input:-webkit-autofill": {
+                            "-webkit-box-shadow": `0 0 0 30px #F2F2F2 inset !important`,
+                            background: "transparent !important",
+                          },
+                          border: "none!important",
+                        }}
                           size="small"
                           autoComplete="off"
                           fullWidth
@@ -337,6 +352,20 @@ const DndPage = ({ initialData }) => {
                 <Grid item container spacing={1}>
                   <Grid item md={8}>
                     <TextField
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        background: `#F2F2F2!important`,
+                        borderRadius: `0.5rem`,
+                        "& fieldset": {
+                          border: "none",
+                        },
+                      },
+                      "& .MuiOutlinedInput-input:-webkit-autofill": {
+                        "-webkit-box-shadow": `0 0 0 30px #F2F2F2 inset !important`,
+                        background: "transparent !important",
+                      },
+                      border: "none!important",
+                    }}
                       autoComplete="off"
                       size="small"
                       fullWidth
@@ -386,6 +415,20 @@ const DndPage = ({ initialData }) => {
                           <Grid item md={9}>
                             {item.type === "TextInput" && (
                               <TextField
+                              sx={{
+                                "& .MuiOutlinedInput-root": {
+                                  background: `#F2F2F2!important`,
+                                  borderRadius: `0.5rem`,
+                                  "& fieldset": {
+                                    border: "none",
+                                  },
+                                },
+                                "& .MuiOutlinedInput-input:-webkit-autofill": {
+                                  "-webkit-box-shadow": `0 0 0 30px #F2F2F2 inset !important`,
+                                  background: "transparent !important",
+                                },
+                                border: "none!important",
+                              }}
                                 size="small"
                                 autoComplete="off"
                                 fullWidth

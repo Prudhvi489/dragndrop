@@ -35,6 +35,12 @@ const PreviewPage = () => {
    */
   const Handleadd_data = () => {
     if (items?.length === 0) return;
+    for(let i=0;i<=items?.length-1;i++){
+      if(items[i].value.trim() === ""){
+        alert("Please enter the values");
+        return;
+      }
+    }
     const result = {};
     items.forEach((item) => {
       result[item.content] = item.value;
@@ -115,6 +121,21 @@ const PreviewPage = () => {
                           return tempItems;
                         });
                       }}
+                      sx={{
+                        "& .MuiOutlinedInput-root": {
+                          background: `#F2F2F2!important`,
+                          borderRadius: `0.5rem`,
+                          "& fieldset": {
+                            border: "none",
+                          },
+                        },
+                        "& .MuiOutlinedInput-input:-webkit-autofill": {
+                          "-webkit-box-shadow": `0 0 0 30px #F2F2F2 inset !important`,
+                          background: "transparent !important",
+                        },
+                        border: "none!important",
+                      }}
+              
                     />
                   )}
                 </Grid>

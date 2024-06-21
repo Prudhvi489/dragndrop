@@ -144,7 +144,7 @@ const Mainpage = () => {
           </>
         ) : (
           <Grid container direction={"column"} alignItems="center" justifyContent="center">
-            <Grid item>Please Create your template</Grid>
+            <Grid item> Create your own template</Grid>
             <Grid item>
           <img src={nodatafound1} width="100%" height="100%" alt={"no data found"}/>
           </Grid>
